@@ -1,0 +1,19 @@
+{
+    "meters": [
+        {
+            "scope": "sdep-observability",
+            "scope_version": "1.0",
+            "met_points": [
+                {
+                    "obj_id": "IrIf",
+                    "metric_path" : {"paths": ["snapshot.val.sts.tx.t.np"]},
+                    "otel_name" : "system.sdwan.agent.assurance.tx_packet_counter",
+                    "type": "Counter",
+                    "description": "Transmitted packets counter",
+                    "unit": "bytes",
+                    "trans_func": "parse_int"
+                }
+            ]
+        }
+    ]
+}

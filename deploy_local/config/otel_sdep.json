@@ -1,0 +1,4112 @@
+{
+    "meters": [
+        {
+            "scope": "rlf",
+            "met_points": [
+                {
+                    "type": "Counter",
+                    "unit": "1",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.agent.assurance.received_metrics_count",
+                    "is_in_aggr_format": "False"
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.agent.assurance.tcp_log_connection_status"
+                },
+                {
+                    "type": "Histogram",
+                    "unit": "1",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.agent.assurance.snapi_requests",
+                    "attributes": {
+                        "status_code": {
+                            "value": "",
+                            "trans_func": "classify_resp_code"
+                        }
+                    },
+                    "histogram_boundaries": [
+                        0,
+                        5,
+                        10,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100,
+                        150,
+                        200,
+                        300,
+                        400,
+                        500,
+                        600,
+                        1000,
+                        5000
+                    ]
+                }
+            ],
+            "scope_version": "1.0"
+        },
+        {
+            "scope": "sdep",
+            "met_points": [
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "obj_id": "RazorLinkCtxMgr",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.num_of_contexts",
+                    "description": "Number of Contexts established",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.nCtx"
+                        ]
+                    }
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "obj_id": "IscCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.tick_timers",
+                    "attributes": {
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "description": "Number of tick timers",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.g.Tk.nTk"
+                        ]
+                    }
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "obj_id": "IscCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.late_tick_timers",
+                    "attributes": {
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "description": "Number of late tick timers",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.g.Tk.nlTk"
+                        ]
+                    }
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "obj_id": "IR",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.interface_state",
+                    "attributes": {
+                        "interface": {
+                            "value": "",
+                            "target": "snapshot.val.Sta.IrName",
+                            "trans_func": "get_interface_id"
+                        }
+                    },
+                    "trans_func": "get_interface_state",
+                    "description": "",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.netinfo"
+                        ]
+                    }
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "bit/s",
+                    "obj_id": "IR",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.interface_rx_bitrate",
+                    "attributes": {
+                        "interface": {
+                            "value": "",
+                            "target": "snapshot.val.Sta.IrName",
+                            "trans_func": "get_interface_id"
+                        }
+                    },
+                    "trans_func": "get_rx_bitrate",
+                    "description": "rx bitrate for interface in the attribute",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.pdb"
+                        ]
+                    }
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "bit/s",
+                    "obj_id": "IR",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.interface_tx_bitrate",
+                    "attributes": {
+                        "interface": {
+                            "value": "",
+                            "target": "snapshot.val.Sta.IrName",
+                            "trans_func": "get_interface_id"
+                        }
+                    },
+                    "trans_func": "get_tx_bitrate",
+                    "description": "tx bitrate for interface in the attribute",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.pdb"
+                        ]
+                    }
+                },
+                {
+                    "type": "Histogram",
+                    "unit": "1",
+                    "obj_id": "RazorLinkCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.context_state_hist",
+                    "attributes": {
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.obj",
+                            "trans_func": "get_context_id"
+                        }
+                    },
+                    "trans_func": "parse_int",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.state"
+                        ]
+                    },
+                    "histogram_boundaries": [
+                        0,
+                        3,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "obj_id": "RazorLinkCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.context_state",
+                    "attributes": {
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.obj",
+                            "trans_func": "get_context_id"
+                        }
+                    },
+                    "trans_func": "parse_int",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.state"
+                        ]
+                    }
+                },
+                {
+                    "type": "Histogram",
+                    "unit": "s",
+                    "obj_id": "RazorLinkCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.context_age_hist",
+                    "attributes": {
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.obj",
+                            "trans_func": "get_context_id"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.age"
+                        ]
+                    },
+                    "histogram_boundaries": [
+                        0,
+                        60,
+                        3600,
+                        86400,
+                        2592000
+                    ]
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "s",
+                    "obj_id": "RazorLinkCtx",
+                    "otel_name": "services.hosting.virtual_machine.sdwan_end_point.context_age",
+                    "attributes": {
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.obj",
+                            "trans_func": "get_context_id"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.age"
+                        ]
+                    }
+                },
+                {
+                    "type": "Histogram",
+                    "unit": "ms",
+                    "obj_id": "MbcpDefCC",
+                    "otel_name": "devices.network.datacentre.cdc.3917.jitter",
+                    "attributes": {
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        },
+                        "sdep_remote_interface_id": {
+                            "target": "Hd.Cl.info",
+                            "value": 0,
+                            "trans_func": "get_remid_from_mbcp_msg"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.rtt.Sta.v"
+                        ]
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "Hd.Cl.info",
+                            "regex_match": "Ethernet_eth2_3917"
+                        },
+                        {
+                            "target": "snapshot.val.Sta.rtt.Sts.ns",
+                            "helper_func": {
+                                "name": "gt",
+                                "arguments": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "histogram_boundaries": [
+                        10,
+                        20,
+                        50,
+                        100,
+                        200,
+                        500,
+                        1000,
+                        2000,
+                        5000
+                    ]
+                },
+                {
+                    "type": "Histogram",
+                    "unit": "ms",
+                    "obj_id": "MbcpDefCC",
+                    "otel_name": "devices.network.datacentre.cdc.3917.rtt",
+                    "attributes": {
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        },
+                        "sdep_remote_interface_id": {
+                            "target": "Hd.Cl.info",
+                            "value": 0,
+                            "trans_func": "get_remid_from_mbcp_msg"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sta.rtt.Sta.s"
+                        ]
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "Hd.Cl.info",
+                            "regex_match": "Ethernet_eth2_3917"
+                        },
+                        {
+                            "target": "snapshot.val.Sta.rtt.Sts.ns",
+                            "helper_func": {
+                                "name": "gt",
+                                "arguments": [
+                                    0
+                                ]
+                            }
+                        }
+                    ],
+                    "histogram_boundaries": [
+                        10,
+                        20,
+                        50,
+                        100,
+                        200,
+                        500,
+                        1000,
+                        2000,
+                        5000
+                    ]
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "1",
+                    "obj_id": "IscBrr",
+                    "otel_name": "devices.network.datacentre.cdc.3917.tx_dropped_pdus",
+                    "attributes": {
+                        "reason": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.mBrr.I.dr.m",
+                            "snapshot.val.Sts.tx.mBrr.I.dr.t",
+                            "snapshot.val.Sts.tx.mBrr.I.dr.l",
+                            "snapshot.val.Sts.tx.mBrr.I.dr.i",
+                            "snapshot.val.Sts.tx.mBrr.I.dr.u"
+                        ],
+                        "helper_func": {
+                            "name": "classify_tx_dropped_pdus"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.IfId",
+                            "regex_match": "Ethernet_eth2_3917"
+                        }
+                    ]
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "1",
+                    "obj_id": "IscBrr",
+                    "otel_name": "devices.network.datacentre.cdc.3917.rx_dropped_pdus",
+                    "attributes": {
+                        "reason": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.rx.mBrr.I.dr.l",
+                            "snapshot.val.Sts.rx.mBrr.I.dr.o",
+                            "snapshot.val.Sts.rx.mBrr.I.dr.d",
+                            "snapshot.val.Sts.rx.mBrr.I.dr.r"
+                        ],
+                        "helper_func": {
+                            "name": "classify_rx_dropped_pdus"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.IfId",
+                            "regex_match": "Ethernet_eth2_3917"
+                        }
+                    ]
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "MbcpDefCC",
+                    "otel_name": "devices.network.datacentre.cdc.3917.e2e_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        },
+                        "sdep_remote_interface_id": {
+                            "target": "Hd.Cl.info",
+                            "value": 0,
+                            "trans_func": "get_remid_from_mbcp_msg"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.aI.sB",
+                            "snapshot.val.Sts.aI.fB",
+                            "snapshot.val.Sts.aI.tB"
+                        ],
+                        "helper_func": {
+                            "name": "return_mbcp_msg_dict"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "Hd.Cl.info",
+                            "regex_match": "Ethernet_eth2_3917"
+                        },
+                        {
+                            "target": "snapshot.val.Sta.rtt.Sts.ns",
+                            "helper_func": {
+                                "name": "gt",
+                                "arguments": [
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "1",
+                    "obj_id": "MbcpDefCC",
+                    "otel_name": "devices.network.datacentre.cdc.3917.e2e_packets",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": "",
+                            "target": "snapshot.ctx.ctxId"
+                        },
+                        "sdep_remote_interface_id": {
+                            "target": "Hd.Cl.info",
+                            "value": 0,
+                            "trans_func": "get_remid_from_mbcp_msg"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.aI.sP",
+                            "snapshot.val.Sts.aI.fP",
+                            "snapshot.val.Sts.aI.tP"
+                        ],
+                        "helper_func": {
+                            "name": "return_mbcp_msg_dict"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "Hd.Cl.info",
+                            "regex_match": "Ethernet_eth2_3917"
+                        },
+                        {
+                            "target": "snapshot.val.Sta.rtt.Sts.ns",
+                            "helper_func": {
+                                "name": "gt",
+                                "arguments": [
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "ObservableGauge",
+                    "unit": "ms",
+                    "otel_name": "metadata.correlation.identities",
+                    "attributes": {
+                        "seep_system_id": {
+                            "value": ""
+                        },
+                        "seep_system_name": {
+                            "value": ""
+                        },
+                        "sdep_public_context_id": {
+                            "value": ""
+                        },
+                        "seep_public_context_id": {
+                            "value": ""
+                        },
+                        "sdep_private_context_id": {
+                            "value": ""
+                        },
+                        "sdep_remote_interface_id": {
+                            "value": ""
+                        },
+                        "seep_underlay_network_path": {
+                            "value": ""
+                        }
+                    },
+                    "trans_func": "convert_timestamp_to_ms",
+                    "description": "Unix timestamp in milliseconds",
+                    "attribute_maps": {
+                        "interface_to_network_path_map": {
+                            "can_purge": false,
+                            "store_map": {
+                                "ppp": "devices.terminal.geo_narrowband.bgan.3917",
+                                "_1011": "devices.terminal.geo_broadband.gx.1011",
+                                "_1012": "devices.terminal.geo_broadband.gx.1012",
+                                "_1013": "devices.terminal.geo_broadband.gx.1013",
+                                "_1014": "devices.terminal.geo_broadband.gx.1014",
+                                "_1015": "devices.terminal.geo_broadband.gx.1015",
+                                "_1016": "devices.terminal.geo_broadband.gx.1016",
+                                "_1017": "devices.terminal.geo_broadband.gx.1017",
+                                "_3917": "devices.terminal.geo_broadband.gx.3917",
+                                "_4030": "devices.terminal.geo_broadband.gx.mgmt",
+                                "_4031": "devices.terminal.geo_narrowband.bgan.4031",
+                                "_4032": "devices.terminal.terrestrial_broadband.ivent_lte.0",
+                                "_4033": "devices.terminal.terrestrial_broadband.ivent_lte.0",
+                                "_4034": "devices.terminal.terrestrial_broadband.ivent_lte.0",
+                                "_4035": "devices.terminal.terrestrial_broadband.ivent_lte.0",
+                                "_4036": "devices.terminal.leo_broadband.oneweb.0",
+                                "_4037": "devices.terminal.leo_broadband.oneweb.0",
+                                "_4038": "devices.terminal.leo_broadband.oneweb.0",
+                                "_4039": "devices.terminal.leo_broadband.oneweb.0",
+                                "_4040": "devices.terminal.leo_broadband.byon.0"
+                            }
+                        },
+                        "interface_id_to_rem_interface_map": {}
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "fvkau3-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "sp961a-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "zajx7c-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "ryt10a-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "9pyxa8-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "s6mz4x-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "unl3h5-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.tx_data",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.val.Sts.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "n2h1wp-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "fvkau3-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "fvkau3"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "ryt10a-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "ryt10a"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "9pyxa8-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "9pyxa8"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "s6mz4x-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "s6mz4x"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "unl3h5-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "unl3h5"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "n2h1wp-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "n2h1wp"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "sp961a-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "sp961a"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.status",
+                    "description": "Status of an overlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tot.u",
+                            "snapshot.val.Sts.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.id",
+                            "regex_match": "zajx7c-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "zajx7c"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": "0.0.145"
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "fvkau3-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "sp961a-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "zajx7c-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "ryt10a-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "9pyxa8-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "s6mz4x-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "unl3h5-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "type": "ObservableCounter",
+                    "unit": "By",
+                    "obj_id": "SlaMtr",
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.tx_data",
+                    "description": "Tx bytes transmitted over an overlay",
+                    "attributes": {
+                        "category": {
+                            "value": ""
+                        },
+                        "context_id": {
+                            "value": 0,
+                            "target": "snapshot.ctx.ctxId"
+                        }
+                    },
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.val.Sts.tx.tot.uro"
+                        ],
+                        "helper_func": {
+                            "name": "categorize_tx_data"
+                        }
+                    },
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "n2h1wp-sla-down"
+                        }
+                    ],
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "fvkau3-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "fvkau3"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "zajx7c-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "zajx7c"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "ryt10a-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "ryt10a"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "9pyxa8-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "9pyxa8"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "s6mz4x-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "s6mz4x"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "unl3h5-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "unl3h5"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "n2h1wp-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "n2h1wp"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.status",
+                    "description": "Status of an overlay (https://prod2.atlassian.net/wiki/x/IICgCwE)",
+                    "obj_id": "SlaMtr",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.tx.tot.u",
+                            "snapshot.val.Sts.tx.tot.ur",
+                            "snapshot.ctx.ctxId"
+                        ],
+                        "helper_func": {
+                            "name": "transform_tx_data_seep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "snapshot.val.Sta.g.id",
+                            "regex_match": "sp961a-sla-down"
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1.0,
+                        "record_interval": 10,
+                        "rtt_cfg": {},
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Overlay",
+                        "status_if_type": "",
+                        "vrf_id": "sp961a"
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.146",
+                        "to_v": ""
+                    }
+                },
+                {
+                    "otel_name": "devices.network.datacentre.cdc.3917.status",
+                    "description": "Status of an underlay (Categorised: 0->Unknown, 1->NFunc, 2->Degraded, 3->Func)",
+                    "obj_id": "MbcpDefCC",
+                    "metric_path": {
+                        "paths": [
+                            "snapshot.val.Sts.aI.sB",
+                            "snapshot.val.Sts.aI.fB",
+                            "snapshot.val.Sts.aI.tB",
+                            "snapshot.val.Sta.rtt.Sta.s",
+                            "snapshot.ctx.ctxId",
+                            "Hd.Cl.info"
+                        ],
+                        "helper_func": {
+                            "name": "transform_mbcp_data_sdep"
+                        }
+                    },
+                    "type": "ObservableGauge",
+                    "unit": "1",
+                    "match_attributes": [
+                        {
+                            "target": "Hd.Cl.info",
+                            "regex_match": "Ethernet_eth2_3917"
+                        },
+                        {
+                            "target": "snapshot.val.Sta.rtt.Sts.ns",
+                            "helper_func": {
+                                "name": "gt",
+                                "arguments": [
+                                    5
+                                ]
+                            }
+                        }
+                    ],
+                    "attribute_maps": {
+                        "ctx_map": {},
+                        "ir_map": {}
+                    },
+                    "status_cfg": {
+                        "store_size": 10,
+                        "pos_w_adj_factor": 2,
+                        "neg_w_adj_factor": 2,
+                        "full_history_required": true,
+                        "confidence_index": 1,
+                        "record_interval": 10,
+                        "rtt_cfg": {
+                            "gx": {
+                                "normal": 800,
+                                "cap": 3200,
+                                "pos_w_adj_factor": 50,
+                                "neg_w_adj_factor": 100
+                            },
+                            "lte": {
+                                "normal": 100,
+                                "cap": 400,
+                                "pos_w_adj_factor": 50,
+                                "neg_w_adj_factor": 100
+                            },
+                            "leo": {
+                                "normal": 260,
+                                "cap": 1040,
+                                "pos_w_adj_factor": 50,
+                                "neg_w_adj_factor": 100
+                            },
+                            "bgan": {
+                                "normal": 1600,
+                                "cap": 6400,
+                                "pos_w_adj_factor": 50,
+                                "neg_w_adj_factor": 100
+                            },
+                            "sdep": {
+                                "normal": 0,
+                                "cap": 0,
+                                "pos_w_adj_factor": 50,
+                                "neg_w_adj_factor": 100
+                            }
+                        },
+                        "status_limits": [
+                            0.001,
+                            0.4,
+                            0.6
+                        ],
+                        "status_inst_type": "Underlay",
+                        "status_if_type": "sdep",
+                        "vrf_id": "",
+                        "prim_ctx_id": "",
+                        "if_id": "Ethernet_eth2_3917",
+                        "rtt_store_size": 10,
+                        "rtt_stop_calc": 5
+                    },
+                    "rlf_version": {
+                        "from_v": "0.0.113",
+                        "to_v": ""
+                    }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1012 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "ryt10a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1013 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "9pyxa8"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1016 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "s6mz4x"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1017 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "unl3h5"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1018 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "n2h1wp"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 3893 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "fvkau3"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 3896 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "sp961a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 3899 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "zajx7c"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3883.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 3883 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "jrlak6"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3884.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 3884 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "84epbx"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1015.demanded_data",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of bytes demanded by the user to be send over the 1015 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nByDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "bmx851"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1012 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "ryt10a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1013 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "9pyxa8"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1016 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "s6mz4x"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1017 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "unl3h5"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1018 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "n2h1wp"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 3893 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "fvkau3"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 3896 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "sp961a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 3899 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "zajx7c"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3883.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 3883 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "jrlak6"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3884.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 3884 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "84epbx"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1015.demanded_frames",
+                  "obj_id": "IscSchedGrp",
+                  "description": "Number of blocks demanded by the user to be send over the 1015 overlay",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlIn",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlTo",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlOf",
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.nBlDc",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_demanded_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "bmx851"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "fvkau3"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "ryt10a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "9pyxa8"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "s6mz4x"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "unl3h5"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "n2h1wp"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "sp961a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "zajx7c"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3883.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "jrlak6"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3884.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "84epbx"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "By",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1015.supplied_data",
+                  "description": "Measures the number of bytes processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBy",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "bmx851"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3893.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "fvkau3"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1012.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "ryt10a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1013.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "9pyxa8"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1016.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "s6mz4x"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1017.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "unl3h5"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1018.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "n2h1wp"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3896.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "sp961a"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3899.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "zajx7c"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3883.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "jrlak6"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_3884.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "84epbx"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                },
+                {
+                  "type": "ObservableCounter",
+                  "obj_id": "IscSchedGrp",
+                  "unit": "1",
+                  "otel_name": "services.overlay_network.corporate_vrf.corporate_vrf_1015.supplied_frames",
+                  "description": "Measures the number of packets processed between the LAN side and the reference point In2. This reflects user traffic that gets successfully sent by the remote peer towards its final destination.",
+                  "attributes": {
+                    "type": {
+                      "value": ""
+                    },
+                    "category": {
+                      "value": ""
+                    },
+                    "sub-category_a": {
+                      "value": ""
+                    },
+                    "source": {
+                      "value": ""
+                    },
+                    "scope": {
+                      "value": ""
+                    },
+                    "context_id": {
+                      "value": 0,
+                      "target": "snapshot.ctx.ctxId"
+                    }
+                  },
+                  "metric_path": {
+                    "paths": [
+                      "snapshot.val.Sts.tx.QoSM.Stor.User.BlPo.nBl",
+                      "snapshot.obj"
+                    ],
+                    "helper_func": {
+                      "name": "categorize_supplied_overlay_metrics"
+                    }
+                  },
+                  "match_attributes": [
+                    {
+                      "target": "snapshot.val.Sta.g.id",
+                      "regex_match": "bmx851"
+                    }
+                  ],
+                  "rlf_version": {
+                    "from_v": "0.0.148",
+                    "to_v": ""
+                  }
+                }
+            ],
+            "scope_version": "1.0"
+        }
+    ]
+}

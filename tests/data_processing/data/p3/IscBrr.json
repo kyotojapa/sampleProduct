@@ -1,0 +1,114 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 800
+    },
+    "Th": "<7fa1cffff640!214>#(AsyncIoProcessor@1-1)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20221026T094406.024238",
+    "Cl": {
+      "ownr": "<IscCtx!41258325>",
+      "oid": "<IscBrr!41258357>",
+      "info": "ctxId=2brrId=3",
+      "sinf": "state=200",
+      "goid": "4799c4c3-74e9-4e11-a248-cabeb879a3a6"
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 54821,
+    "ctx": {
+      "ctxId": "ed7cacf6-8b0d-4db6-bd1e-3e28e0a1b921",
+      "oid": "<IscCtx!41258325>"
+    },
+    "obj": "<IscBrr!41258357>",
+    "val": {
+      "Sta": {
+        "g": {
+          "CtxId": "<IscCtx!41258325>",
+          "IfId": "ppp0",
+          "IscIfRel": "<IscIfRel!41258339>^(<IscCtx!41258325>)",
+          "tc": "context",
+          "mBrr": {
+            "BId": 3
+          }
+        },
+        "tx": {
+          "cWl": -1,
+          "eR": 1,
+          "mBrr": {
+            "idT": 11155,
+            "lw": 1,
+            "cP": 0,
+            "aA": 0,
+            "xC": 0,
+            "aC": 0,
+            "rA": 0,
+            "tA": 0,
+            "pP": 0,
+            "cBr": 29,
+            "I": {
+              "n": 358809,
+              "c": 358809
+            }
+          }
+        },
+        "rx": {
+          "mBrr": {
+            "I": {
+              "n": 19316,
+              "c": 19316
+            }
+          }
+        }
+      },
+      "Sts": {
+        "tx": {
+          "nPu": 20399244,
+          "nNoPu": 1711801,
+          "NoPuR": {
+            "nD": 949,
+            "oC": 1711801,
+            "Mg": 20030481,
+            "Br": 20030481,
+            "Ir": 0
+          },
+          "nPi": 0,
+          "nPd": 2,
+          "mBrr": {
+            "I": {
+              "nU": 10193,
+              "ncP": 349702,
+              "nA": 19630,
+              "npA": 0,
+              "dr": {
+                "m": 9106,
+                "t": 3,
+                "l": 0,
+                "i": 0,
+                "u": 0
+              }
+            }
+          }
+        },
+        "rx": {
+          "mBrr": {
+            "I": {
+              "nU": 675,
+              "nA": 12489,
+              "npA": 0,
+              "dr": {
+                "l": 0,
+                "o": 161,
+                "d": 0,
+                "r": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

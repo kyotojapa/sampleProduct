@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    hostname: mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+  otel-collector:
+    image: otel/opentelemetry-collector
+    hostname: collector
+    container_name: collector
+    restart: always
+    volumes:
+      - ./collector-config/collector-config.yaml:/etc/otelcol/config.yaml
+    ports:
+      - "4318:4318"   # http_port for http receiver

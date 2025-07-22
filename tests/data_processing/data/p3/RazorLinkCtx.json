@@ -1,0 +1,38 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "Components.RazorLink.snapshot",
+    "Ti": "20240215T160110.032409",
+    "Cl": {
+      "ownr": "",
+      "oid": "<RazorLinkCtx!93771188>",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 26865,
+    "ctx": "",
+    "obj": "<RazorLinkCtx!93771188>",
+    "val": {
+      "Sta": {
+        "guid": "5cfe5ad8-16e0-4bed-9035-1beb1717b14b",
+        "pid": "c104cc81-7498-49b0-bcd0-ae518193180a",
+        "sid": "c104cc81-7498-49b0-bcd0-ae518193180a",
+        "dir": "out",
+        "state": "3",
+        "statestr": "Callup(established)",
+        "born": "2024-02-1515:59:03",
+        "age": 126,
+        "sesscnt": 1
+      }
+    }
+  }
+}

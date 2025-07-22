@@ -1,0 +1,63 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20240529T095310.062109",
+    "Cl": {
+      "ownr": "<IscCtx!120672>",
+      "oid": "<IscCtxRemIf!120683>",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 5941,
+    "ctx": {
+      "ctxId": "0bba9f0e-0647-4a3d-82f2-223ec39760e6",
+      "oid": "<IscCtx!120672>"
+    },
+    "obj": "<IscCtxRemIf!120683>",
+    "val": {
+      "Sta": {
+        "g": {
+          "S": {
+            "cSt": 203,
+            "bfCSC": 0,
+            "svcCost": "0"
+          },
+          "Ept": "{\"Candidates\":[{\"Dom\":\"private\",\"Ep\":\"10.251.191.6:4000\",\"EpFmt\":\"IP\"}]}",
+          "brrs": {
+            "nBrrs": 0
+          }
+        },
+        "tx": {
+          "e": 0,
+          "tuBu": 2684355,
+          "Bu": {
+            "B": 0
+          }
+        }
+      },
+      "Sts": {
+        "tx": {
+          "nETrs": 0,
+          "nBuTrs": 0,
+          "Bu": {
+            "tTu": 0,
+            "nTu": 0,
+            "nooB": 0,
+            "tTkn": 0,
+            "tSto": 0
+          }
+        }
+      }
+    }
+  }
+}

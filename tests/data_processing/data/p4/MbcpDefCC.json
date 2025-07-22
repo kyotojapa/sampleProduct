@@ -1,0 +1,93 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 800
+    },
+    "Th": "<7fa1ceffd640!216>#(AsyncIoProcessor@1-3)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20221026T103135.815312",
+    "Cl": {
+      "ownr": "<IscCtx!49866730>",
+      "oid": "<MbcpDefCC!49866746>",
+      "info": "ppp0<-><IscCtxRemIf!49866744>",
+      "sinf": "",
+      "goid": ""
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 74755,
+    "ctx": "{\"ctxId\": \"eae9b81f-3a3b-4e9b-aeef-ccc4cb406f54\", \"oid\": \"<IscCtx!49866730>\"}",
+    "obj": "<MbcpDefCC!49866746>",
+    "val": {
+      "Sta": {
+        "e": 1,
+        "cW": 774528,
+        "pBr": 59579076,
+        "Bu": {
+          "B": 186185
+        },
+        "ss": 0,
+        "inc": 6144,
+        "lgW": 4380,
+        "nSP": 0,
+        "owB": 0,
+        "owP": 0,
+        "oBr": 1,
+        "aBr": 1,
+        "rtt": {
+          "Sta": {
+            "rto": 377,
+            "rrto": 377,
+            "b": 0,
+            "s": 103,
+            "v": 66
+          },
+          "Sts": {
+            "min": 2,
+            "max": 680,
+            "ns": 519
+          }
+        },
+        "lR": 0,
+        "cc": {
+          "sst": 407625
+        }
+      },
+      "Sts": {
+        "p": 26,
+        "t": 0,
+        "f": 21,
+        "c": 0,
+        "amE": 4,
+        "afP": 2467,
+        "afB": 3470235,
+        "ifE": 1,
+        "ifP": 667,
+        "ifB": 920951,
+        "idE": 4810,
+        "wlE": 467,
+        "afE": 1021,
+        "asE": 2348,
+        "Bu": {
+          "tTu": 59350381,
+          "nTu": 46359,
+          "nooB": 184
+        },
+        "nETrs": 1611,
+        "nBuTrs": 369,
+        "nFCwndTrs": 1246,
+        "aI": {
+          "sP": 37208,
+          "sB": 51635678,
+          "fP": 5373,
+          "fB": 7528518,
+          "tP": 151,
+          "tB": 212759
+        }
+      }
+    }
+  }
+}

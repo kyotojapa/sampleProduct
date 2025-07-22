@@ -1,0 +1,135 @@
+{
+    "Hd": {
+        "Ty": "Log",
+        "P": {
+            "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+            "Li": 904
+        },
+        "Th": "<7f7b12ffd640!215>#(AsyncIoProcessor@1-2)",
+        "Ct": "lw.comp.ISC.context.snapshot",
+        "Ti": "20240822T103730.592301",
+        "Cl": {
+            "ownr": "<IscCtx!1563>",
+            "oid": "<SlaMtr!2840>[fvkau3-sla]",
+            "info": "",
+            "sinf": "",
+            "goid": ""
+        }
+    },
+    "0": "",
+    "snapshot": {
+        "sid": 2121,
+        "ctx": {
+            "ctxId": "b979ae75-f007-4d2d-9816-84cc1119555a",
+            "oid": "<IscCtx!1563>"
+        },
+        "obj": "<SlaMtr!2840>[fvkau3-sla]",
+        "val": {
+            "Sta": {
+                "g": {
+                    "id": "fvkau3-sla-up",
+                    "cSl": "0",
+                    "aSl": "0",
+                    "pDmd": 1,
+                    "hDmd": 1,
+                    "QoSM": {
+                        "ParAggr": "<SlaAlrtSt!2845>[defaultDomain]^(<IscCtx!1563>)"
+                    },
+                    "SlaAlrtSt": {
+                        "id": "<SlaAlrtSt!2845>[defaultDomain]",
+                        "alrtd": 1,
+                        "alSt": "none"
+                    }
+                }
+            },
+            "Sts": {
+                "tx": {
+                    "tot": {
+                        "t": 292138,
+                        "u": 1384589069,
+                        "ur": 1483614852,
+                        "uro": 1571220326
+                    },
+                    "pst": {
+                        "t": 235139,
+                        "u": 1277934812,
+                        "ur": 1375855229,
+                        "uro": 1462579334
+                    },
+                    "alt": {
+                        "t": 4848,
+                        "u": 106654257,
+                        "ur": 107759623,
+                        "uro": 108640992
+                    },
+                    "rlx": {
+                        "t": 52151,
+                        "u": 0,
+                        "ur": 0,
+                        "uro": 0
+                    },
+                    "QoSM": {
+                        "Stor": {
+                            "User": {
+                                "nBlIn": 46839,
+                                "nByIn": 9977720135,
+                                "BlPo": {
+                                    "nBl": 46824,
+                                    "nBy": 9974076377,
+                                    "totRtt": 3770315,
+                                    "refRtt": 80,
+                                    "minRtt": 45,
+                                    "maxRtt": 130,
+                                    "lRttTh": 55,
+                                    "nlRttBl": 2921,
+                                    "nlRttBy": 373129416,
+                                    "totlRtt": 173623,
+                                    "hRttTh": 105,
+                                    "nhRttBl": 4937,
+                                    "nhRttBy": 1205526246,
+                                    "tothRtt": 602926
+                                },
+                                "nBlTo": 0,
+                                "nByTo": 0,
+                                "nBlOf": 0,
+                                "nByOf": 0,
+                                "nBlDc": 0,
+                                "nByDc": 0,
+                                "BlFrCf": {
+                                    "nBl": 7245254,
+                                    "nBy": 9974575264,
+                                    "totRtt": 511897783,
+                                    "refRtt": 70,
+                                    "minRtt": 36,
+                                    "maxRtt": 130,
+                                    "lRttTh": 45,
+                                    "nlRttBl": 203785,
+                                    "nlRttBy": 281842641,
+                                    "totlRtt": 9836451,
+                                    "hRttTh": 95,
+                                    "nhRttBl": 470543,
+                                    "nhRttBy": 588679890,
+                                    "tothRtt": 52088047
+                                }
+                            },
+                            "mbcp": {
+                                "nCoFr": 7,
+                                "nCoBy": 0,
+                                "nDaFr": 7194825,
+                                "nDaBy": 9976191344,
+                                "nDaFrRe": 123472,
+                                "nDaByRe": 99025783,
+                                "nPrFr": 0,
+                                "nPrBy": 0,
+                                "nFrSucc": 7245254,
+                                "nBySucc": 9974575264,
+                                "nFrFail": 71877,
+                                "nByFail": 99025783
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

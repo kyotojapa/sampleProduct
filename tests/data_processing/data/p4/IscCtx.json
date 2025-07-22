@@ -1,0 +1,62 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 953
+    },
+    "Th": "<7fd4127fc640!200>#(AsyncIoProcessor@1-1)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20250324T172115.046327",
+    "Cl": {
+      "ownr": "<IscMgr!400>",
+      "oid": "<IscCtx!41535>[TEST_DC<-TEST_EDGE]",
+      "info": "",
+      "sinf": "state=200",
+      "goid": "6760124e-3e32-4b42-b7d1-a7b889759b4b"
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 4015,
+    "ctx": {
+      "ctxId": "6760124e-3e32-4b42-b7d1-a7b889759b4b",
+      "oid": "<IscCtx!41535>[TEST_DC<-TEST_EDGE]"
+    },
+    "obj": "<IscCtx!41535>[TEST_DC<-TEST_EDGE]",
+    "val": {
+      "Sta": {
+        "g": {
+          "sysIds": {
+            "loc": "5a63a89c-69e8-43a3-bdc4-81815be84977",
+            "rem": "730caadd-0fe6-4075-baeb-4f020e7433d1"
+          },
+          "cL": 0,
+          "S2": 0,
+          "comp": "1",
+          "nTEps": 0,
+          "nChns": 5,
+          "nRels": 2,
+          "nLocIfs": 1,
+          "nRemIfs": 2,
+          "RelMode": 0,
+          "idlTo": 16000,
+          "idlT": 14901
+        },
+        "tx": {
+          "cBr": 1409
+        }
+      },
+      "Sts": {
+        "g": {
+          "Tk": {
+            "nTk": 200,
+            "nlTk": 0,
+            "tlTkT": 0
+          },
+          "SchedProf": "id:IscCtx,last:0,nAbo:0,totAbo:0,n:0,tot:0,limit:15,min:4294967295,max:0,maxRec:0"
+        }
+      }
+    }
+  }
+}

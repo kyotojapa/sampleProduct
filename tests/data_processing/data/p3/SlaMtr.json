@@ -1,0 +1,68 @@
+{
+    "Hd": {
+        "Ty": "Log",
+        "P": {
+            "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+            "Li": 862
+        },
+        "Ct": "lw.comp.ISC.context.snapshot",
+        "Ti": "20240613T072920.527407",
+        "Cl": {
+            "ownr": "<IscCtx!304115>",
+            "oid": "<SlaMtr!305164>[fvkau3-sla]",
+            "info": "",
+            "sinf": "",
+            "goid": ""
+        },
+        "Fu": "DoSnapshotLog"
+    },
+    "0": "",
+    "snapshot": {
+        "sid": 17493,
+        "ctx": {
+            "ctxId": "5808c266-26b8-4699-8c4d-11fc2e995721",
+            "oid": "<IscCtx!304115>"
+        },
+        "obj": "<SlaMtr!305164>[fvkau3-sla]",
+        "val": {
+            "Sta": {
+                "id": "fvkau3-sla",
+                "cSl": "3",
+                "aSl": "0",
+                "pDmd": 0,
+                "hDmd": 0,
+                "SlaAlrtSt": {
+                    "id": "<SlaAlrtSt!305169>[Gold]",
+                    "alrtd": 0,
+                    "alSt": "none"
+                }
+            },
+            "Sts": {
+                "tot": {
+                    "t": 750542,
+                    "u": 3517,
+                    "ur": 3631,
+                    "uro": 5254
+                },
+                "pst": {
+                    "t": 0,
+                    "u": 0,
+                    "ur": 0,
+                    "uro": 0
+                },
+                "alt": {
+                    "t": 17514,
+                    "u": 3517,
+                    "ur": 3631,
+                    "uro": 5254
+                },
+                "rlx": {
+                    "t": 733028,
+                    "u": 0,
+                    "ur": 0,
+                    "uro": 0
+                }
+            }
+        }
+    }
+}

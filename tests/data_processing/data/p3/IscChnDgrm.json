@@ -1,0 +1,154 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20240406T122512.951206",
+    "Cl": {
+      "ownr": "<IscCtx!2437233155>",
+      "oid": "<IscChnDgrm!2551584007>",
+      "info": "",
+      "sinf": "state=200",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 1318167,
+    "ctx": {
+      "ctxId": "836068f4-eb17-4501-b9d5-469ce9236bb6",
+      "oid": "<IscCtx!2437233155>"
+    },
+    "obj": "<IscChnDgrm!2551584007>",
+    "val": {
+      "Sta": {
+        "g": {
+          "o": 1,
+          "sCW": 0,
+          "sDW": 0,
+          "lrEp": "169.254.192.1:10000",
+          "llEp": "169.254.255.254:10000",
+          "rlEp": "169.254.255.254:10000",
+          "rrEp": "169.254.192.1:10000",
+          "DSched": "fvkau3-prod2-be-default@6",
+          "CSched": "Context@15",
+          "Ch": {
+            "Id": "5",
+            "hC": 0,
+            "hD": 0
+          }
+        },
+        "tx": {
+          "eL": 1,
+          "Ch": {
+            "I": {
+              "iBl": 1,
+              "eP": 72,
+              "qB": 0,
+              "nP": 72,
+              "wB": 0,
+              "hP": 72,
+              "hW": 0,
+              "WlM": {
+                "F": 0,
+                "bL": 1,
+                "Lwm": 8887,
+                "aH": 0,
+                "Hwm": 10000,
+                "aC": 0,
+                "Cwm": 40448
+              },
+              "r": 0,
+              "dTo": 1000,
+              "Br": {
+                "i": 0,
+                "o": 0,
+                "g": 0,
+                "n": 0,
+                "d": 0
+              }
+            }
+          }
+        },
+        "rx": {
+          "eL": 1,
+          "Ch": {
+            "I": {
+              "eP": 1171,
+              "wB": 0,
+              "nP": 1171,
+              "qB": 0,
+              "hP": 1171,
+              "hW": 0,
+              "WlM": {
+                "F": 0,
+                "bL": 1,
+                "Lwm": 13000000,
+                "aH": 0,
+                "Hwm": 15000000,
+                "aC": 0,
+                "Cwm": 9223372036854775806
+              },
+              "Fc": {
+                "c": "1",
+                "t": "0",
+                "n": "0"
+              }
+            }
+          }
+        }
+      },
+      "Sts": {
+        "tx": {
+          "nUr": 2,
+          "Ch": {
+            "I": {
+              "dBy": 0,
+              "dBl": 0,
+              "ToBy": 0,
+              "ToBl": 0,
+              "qBy": -1,
+              "qBl": 0,
+              "tBy": 72,
+              "tFr": 1,
+              "rBy": 0,
+              "trBy": 0,
+              "trFr": 0,
+              "tcBy": 16,
+              "tcFr": 1,
+              "nUr": 2,
+              "nDs": 0,
+              "nGo": 1,
+              "nStop": 0,
+              "sFr": 1,
+              "fFr": 0,
+              "tsFr": 1,
+              "tfFr": 0,
+              "nrTr": 1,
+              "nxTr": 1,
+              "WlM": {
+                "nHT": 0
+              }
+            }
+          }
+        },
+        "rx": {
+          "nBp": 0,
+          "Ch": {
+            "I": {
+              "nF": 1,
+              "nxT": 1,
+              "WlM": {
+                "nHT": 2
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

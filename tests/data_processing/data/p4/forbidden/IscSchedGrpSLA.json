@@ -1,0 +1,114 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 904
+    },
+    "Th": "<7f7b137fe640!214>#(AsyncIoProcessor@1-1)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20240822T103455.710737",
+    "Cl": {
+      "ownr": "<IscCtx!1563>",
+      "oid": "<IscSchedGrp!2819>[SLA-defaultSLA]",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 1014,
+    "ctx": {
+      "ctxId": "b979ae75-f007-4d2d-9816-84cc1119555a",
+      "oid": "<IscCtx!1563>"
+    },
+    "obj": "<IscSchedGrp!2819>[SLA-defaultSLA]",
+    "val": {
+      "Sta": {
+        "g": {
+          "id": "SLA-defaultSLA",
+          "HaveWrk": 1,
+          "rdyPri": 64,
+          "pkdPri": 0,
+          "Schedld": 1,
+          "QoSM": {
+            "ParAggr": "<IscSchedGrp!2794>[SLADomain-defaultDomain]",
+            "SlaAggr": "<SlaMtr!2840>[defaultSLA]^(<IscCtx!1563>)"
+          },
+          "OnMainSched": 1,
+          "MainSched": "<<IscSchedGrp!2794>[SLADomain-defaultDomain]@3!2798>",
+          "BgSet": 0,
+          "Bdg": 0,
+          "BdgTu": 1000,
+          "SlaMtr": "<SlaMtr!2840>[defaultSLA]"
+        }
+      },
+      "Sts": {
+        "tx": {
+          "BuTkn": 3571205856,
+          "QoSM": {
+            "Stor": {
+              "User": {
+                "nBlIn": 16656,
+                "nByIn": 3506690829,
+                "BlPo": {
+                  "nBl": 16644,
+                  "nBy": 3504429539,
+                  "totRtt": 1303113,
+                  "refRtt": 77,
+                  "minRtt": 53,
+                  "maxRtt": 161,
+                  "lRttTh": 52,
+                  "nlRttBl": 957,
+                  "nlRttBy": 115513503,
+                  "totlRtt": 53015,
+                  "hRttTh": 102,
+                  "nhRttBl": 1887,
+                  "nhRttBy": 453472041,
+                  "tothRtt": 221945
+                },
+                "nBlTo": 0,
+                "nByTo": 0,
+                "nBlOf": 0,
+                "nByOf": 0,
+                "nBlDc": 0,
+                "nByDc": 0,
+                "BlFrCf": {
+                  "nBl": 2546294,
+                  "nBy": 3504514195,
+                  "totRtt": 175628875,
+                  "refRtt": 68,
+                  "minRtt": 32,
+                  "maxRtt": 161,
+                  "lRttTh": 43,
+                  "nlRttBl": 64064,
+                  "nlRttBy": 88647619,
+                  "totlRtt": 2891320,
+                  "hRttTh": 93,
+                  "nhRttBl": 182671,
+                  "nhRttBy": 229064700,
+                  "tothRtt": 19706168
+                }
+              },
+              "mbcp": {
+                "nCoFr": 7,
+                "nCoBy": 0,
+                "nDaFr": 2528537,
+                "nDaBy": 3505774377,
+                "nDaFrRe": 44015,
+                "nDaByRe": 34760404,
+                "nPrFr": 0,
+                "nPrBy": 0,
+                "nFrSucc": 2546294,
+                "nBySucc": 3504514195,
+                "nFrFail": 25350,
+                "nByFail": 34760404
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

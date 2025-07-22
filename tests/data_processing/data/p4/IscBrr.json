@@ -1,0 +1,124 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 953
+    },
+    "Th": "<7f186b7fe640!203>#(AsyncIoProcessor@1-3)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20250324T172114.477776",
+    "Cl": {
+      "ownr": "<IscCtx!57085>[TEST_EDGE->TEST_DC]",
+      "oid": "<IscBrr!57149>[WAN1<->DC_WAN1]",
+      "info": "ctxId=7 brrId=1",
+      "sinf": "state=200",
+      "goid": "911aa77d-37c0-41e4-ba74-2b8222b67f26"
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 6447,
+    "ctx": {
+      "ctxId": "6760124e-3e32-4b42-b7d1-a7b889759b4b",
+      "oid": "<IscCtx!57085>[TEST_EDGE->TEST_DC]"
+    },
+    "obj": "<IscBrr!57149>[WAN1<->DC_WAN1]",
+    "val": {
+      "Sta": {
+        "g": {
+          "CtxId": "<IscCtx!57085>[TEST_EDGE->TEST_DC]",
+          "IfId": "Ethernet_eth2",
+          "IscIfRel": "<IscIfRel!57143>[WAN1<->DC_WAN1]",
+          "tc": "context",
+          "eps": 1400,
+          "mBrr": {
+            "BId": 1,
+            "CC": "<MbcpDefCC!57144>[WAN1<->DC_WAN1]"
+          }
+        },
+        "tx": {
+          "cWl": -1,
+          "eR": 1,
+          "mBrr": {
+            "idT": 13783,
+            "lw": 1,
+            "cP": 0,
+            "aA": 0,
+            "xC": 0,
+            "aC": 0,
+            "rA": 0,
+            "tA": 0,
+            "pP": 0,
+            "cBr": 1223,
+            "I": {
+              "n": 29,
+              "c": 29,
+              "PA": 0
+            }
+          }
+        },
+        "rx": {
+          "mBrr": {
+            "inTo": 0,
+            "I": {
+              "n": 32,
+              "c": 32,
+              "GapAckQua": 0
+            }
+          }
+        }
+      },
+      "Sts": {
+        "tx": {
+          "nPu": 47,
+          "nNoPu": 23,
+          "NoPuR": {
+            "nD": 2,
+            "oC": 23,
+            "Mg": 3,
+            "Br": 3,
+            "BrPA": 0,
+            "Ir": 0
+          },
+          "nPi": 0,
+          "nPd": 0,
+          "mBrr": {
+            "inToTrs": 2,
+            "I": {
+              "nU": 12,
+              "ncP": 28,
+              "nA": 29,
+              "nPA": 0,
+              "nAckDly": 0,
+              "tAckDly": 0,
+              "nPATrs": 0,
+              "dr": {
+                "m": 0,
+                "t": 0,
+                "l": 0,
+                "i": 0,
+                "u": 0
+              }
+            }
+          }
+        },
+        "rx": {
+          "mBrr": {
+            "I": {
+              "nU": 13,
+              "nA": 26,
+              "nPA": 0,
+              "dr": {
+                "l": 0,
+                "o": 0,
+                "d": 0,
+                "r": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

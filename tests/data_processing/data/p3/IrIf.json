@@ -1,0 +1,84 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "lw.comp.IR.snapshot",
+    "Ti": "20240217T083551.181535",
+    "Cl": {
+      "ownr": "<IrMgr!5851>",
+      "oid": "<IrIf!5886>",
+      "info": "bfCSC=0,AddrDoms=private,public,sock=<PubDgrmComms!5897>,Svr=1",
+      "sinf": "0203-Active",
+      "goid": "0efbd20e-9853-4582-ba95-b84cfcca8e42"
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 3302,
+    "ctx": "<IrMgr!323222>",
+    "obj": "<IrIf!5886>",
+    "val": {
+      "Sta": {
+        "g": {
+          "IfId": "Ethernet_eth2_4031",
+          "S": {
+            "cSt": 203,
+            "bfCSC": 0,
+            "svcCost": "1"
+          }
+        },
+        "tx": {
+          "qued": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          },
+          "tuB": 6710887,
+          "Bu": {
+            "B": 10066330
+          }
+        }
+      },
+      "Sts": {
+        "tx": {
+          "Bu": {
+            "tTu": 10210652,
+            "nTu": 15219,
+            "nooB": 0,
+            "tTkn": 144322,
+            "tSto": 0
+          },
+          "d": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          },
+          "p": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          },
+          "t": {
+            "nP": "100000",
+            "nB": "20000"
+          }
+        },
+        "rx": {
+          "r": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          },
+          "d": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          },
+          "p": {
+            "nP": "TCV-NotSet",
+            "nB": "TCV-NotSet"
+          }
+        }
+      }
+    }
+  }
+}

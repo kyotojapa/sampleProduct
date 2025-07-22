@@ -1,0 +1,40 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "Components.RazorLink.snapshot",
+    "Ti": "20240215T160110.032092",
+    "Cl": {
+      "ownr": "",
+      "oid": "<IR!50630>",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 26865,
+    "ctx": "",
+    "obj": "<IR!50630>",
+    "val": {
+      "Sta": {
+        "IrName": "Ethernet_eth2_4033",
+        "Name": "eth2.4033",
+        "Address": "172.29.21.2",
+        "act": "act",
+        "statestr": "0203-Active",
+        "ifstate": "0203-Active",
+        "mgmtstate": "0200-autoactivation",
+        "userstate": "Online",
+        "licstate": "Licensed",
+        "pdb": "<id>Ethernet_eth2_4033</id><irUID>7daaf14c-4ad2-4ca7-b566-882be6c9c9c4</irUID><MgmtState>0200-autoactivation</MgmtState><name>Ethernet_eth2_4033</name><MainState>0203-Active</MainState><TxBitrateCap>2147483646</TxBitrateCap><RxBitrateCap>2147483646</RxBitrateCap><BlockedForComms>0</BlockedForComms><BrrGrpId>1</BrrGrpId><ifMtu>0</ifMtu><TxBitrate>7888</TxBitrate><RxBitrate>0</RxBitrate>",
+        "netinfo": "eth2.4033(Ethernet:Up{})"
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20230831T124141.673414",
+    "Cl": {
+      "ownr": "<IscCtx!1448>",
+      "oid": "<MbcpDefCC!3464>",
+      "info": "ppp0<-><IscCtxRemIf!1549>",
+      "sinf": "",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 33406,
+    "ctx": {
+      "ctxId": "481bc2a1-8a96-432b-862b-61b6e1a953cf",
+      "oid": "<IscCtx!1448>"
+    },
+    "obj": "<MbcpDefCC!3464>",
+    "val": {
+      "Sta": {
+        "e": 1,
+        "cW": 4480,
+        "pBr": 35840000,
+        "Bu": {
+          "B": 112000
+        },
+        "ss": 0,
+        "inc": 6144,
+        "lgW": 4380,
+        "nSP": 0,
+        "owB": 0,
+        "owP": 0,
+        "oBr": 12,
+        "aBr": 12,
+        "rtt": {
+          "Sta": {
+            "rto": 200,
+            "rrto": 26,
+            "b": 0,
+            "s": 0,
+            "v": 4
+          },
+          "Sts": {
+            "min": 1,
+            "max": 109,
+            "ns": 8940
+          }
+        },
+        "lR": 0,
+        "cc": {
+          "sst": 4380
+        }
+      },
+      "Sts": {
+        "p": 0,
+        "t": 0,
+        "f": 0,
+        "c": 0,
+        "afE": 0,
+        "afP": 0,
+        "afB": 0,
+        "ifE": 0,
+        "ifP": 0,
+        "ifB": 0,
+        "idE": 13915,
+        "wlE": 8940,
+        "amE": 1,
+        "asE": 9911,
+        "Bu": {
+          "tTu": 759869,
+          "nTu": 145308,
+          "nooB": 0,
+          "tTkn": 647869,
+          "tSto": 0
+        },
+        "nETrs": 1,
+        "nBuTrs": 1,
+        "nFCwndTrs": 0,
+        "aI": {
+          "sP": 10232,
+          "sB": 647869,
+          "fP": 0,
+          "fB": 0,
+          "tP": 1,
+          "tB": 99
+        }
+      }
+    }
+  }
+}

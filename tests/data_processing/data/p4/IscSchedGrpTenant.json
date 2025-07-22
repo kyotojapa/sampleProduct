@@ -1,0 +1,113 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 904
+    },
+    "Th": "<7f7b137fe640!214>#(AsyncIoProcessor@1-1)",
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20240822T103353.981944",
+    "Cl": {
+      "ownr": "<IscCtx!1563>",
+      "oid": "<IscSchedGrp!2880>[Tenant1-EVERYTHING]",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    }
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 568,
+    "ctx": {
+      "ctxId": "b979ae75-f007-4d2d-9816-84cc1119555a",
+      "oid": "<IscCtx!1563>"
+    },
+    "obj": "<IscSchedGrp!2880>[fvkau3]",
+    "val": {
+      "Sta": {
+        "g": {
+          "id": "Tenant1-EVERYTHING",
+          "HaveWrk": 1,
+          "rdyPri": 64,
+          "pkdPri": 0,
+          "Schedld": 1,
+          "QoSM": {
+            "ParAggr": "<IscSchedGrp!2846>[Tenant1-6]"
+          },
+          "OnMainSched": 1,
+          "MainSched": "<<IscSchedGrp!2846>[Tenant1-6]@3!2850>",
+          "BgSet": 1,
+          "BgSched": "<<IscSchedGrp!2863>[Tenant1-3]@3!2867>",
+          "Bdg": 0,
+          "BdgTu": 1000
+        }
+      },
+      "Sts": {
+        "tx": {
+          "BuTkn": 971984799,
+          "QoSM": {
+            "Stor": {
+              "User": {
+                "nBlIn": 4797,
+                "nByIn": 955759144,
+                "BlPo": {
+                  "nBl": 4780,
+                  "nBy": 952056338,
+                  "totRtt": 339648,
+                  "refRtt": 76,
+                  "minRtt": 47,
+                  "maxRtt": 139,
+                  "lRttTh": 51,
+                  "nlRttBl": 167,
+                  "nlRttBy": 18395176,
+                  "totlRtt": 8752,
+                  "hRttTh": 101,
+                  "nhRttBl": 595,
+                  "nhRttBy": 133735622,
+                  "tothRtt": 63681
+                },
+                "nBlTo": 0,
+                "nByTo": 0,
+                "nBlOf": 0,
+                "nByOf": 0,
+                "nBlDc": 0,
+                "nByDc": 0,
+                "BlFrCf": {
+                  "nBl": 692272,
+                  "nBy": 952549932,
+                  "totRtt": 43932123,
+                  "refRtt": 66,
+                  "minRtt": 38,
+                  "maxRtt": 139,
+                  "lRttTh": 41,
+                  "nlRttBl": 9242,
+                  "nlRttBy": 12788318,
+                  "totlRtt": 378758,
+                  "hRttTh": 91,
+                  "nhRttBl": 47329,
+                  "nhRttBy": 58841204,
+                  "tothRtt": 4745957
+                }
+              },
+              "mbcp": {
+                "nCoFr": 4,
+                "nCoBy": 0,
+                "nDaFr": 688564,
+                "nDaBy": 954389446,
+                "nDaFrRe": 11834,
+                "nDaByRe": 9390041,
+                "nPrFr": 0,
+                "nPrBy": 0,
+                "nFrSucc": 692272,
+                "nBySucc": 952549932,
+                "nFrFail": 6799,
+                "nByFail": 9390041
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

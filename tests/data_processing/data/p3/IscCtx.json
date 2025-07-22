@@ -1,0 +1,56 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "lw.comp.ISC.context.snapshot",
+    "Ti": "20240215T161452.458960",
+    "Cl": {
+      "ownr": "<IscMgr!444>",
+      "oid": "<IscCtx!93771314>",
+      "info": "",
+      "sinf": "state=200",
+      "goid": "2c070c9e-1bcc-4334-b69c-9b30f4be0c34"
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 33690,
+    "ctx": {
+      "ctxId": "b5c04e41-85d4-41a1-9ef2-b61eba0e0d56",
+      "oid": "<IscCtx!93771314>"
+    },
+    "obj": "<IscCtx!93771314>",
+    "val": {
+      "Sta": {
+        "g": {
+          "cL": 0,
+          "S2": 0,
+          "comp": "1",
+          "nTEps": 0,
+          "nChns": 2,
+          "nRels": 3,
+          "nLocIfs": 3,
+          "nRemIfs": 1,
+          "RelMode": 0
+        },
+        "tx": {
+          "cBr": 0
+        }
+      },
+      "Sts": {
+        "g": {
+          "Tk": {
+            "nTk": 37937,
+            "nlTk": 2,
+            "tlTkT": 43
+          },
+          "SchedProf": "id:IscCtx,last:0,nAbo:0,totAbo:0,n:0,tot:0,limit:15,min:4294967295,max:0,maxRec:0"
+        }
+      }
+    }
+  }
+}

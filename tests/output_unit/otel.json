@@ -1,0 +1,122 @@
+{
+    "meters": [
+        {
+            "scope": "rlf-observability",
+            "scope_version": "1.0",
+            "met_points": [
+                {
+                    "otel_name": "counter_no_attr",
+                    "type": "Counter",
+                    "description": "Transmitted packets counter 1",
+                    "unit": "a",
+                    "trans_func": "parse_int1"
+                },
+                {
+                    "otel_name": "counter_stat_attr",
+                    "type": "Counter",
+                    "description": "Transmitted packets counter 2",
+                    "unit": "b",
+                    "trans_func": "parse_int2",
+                    "attributes": {
+                        "attribute1": {"value": 300},
+                        "attribute2": {"value": 400}
+                    }
+                },
+                {
+                    "obj_id": "IRSnapshotLogModel",
+                    "metric_path" : {"paths": ["snapshot.val.sts.tx.t.np"]},
+                    "otel_name" : "counter_dyn_attr",
+                    "type": "Counter",
+                    "description": "Transmitted packets counter 3",
+                    "unit": "c",
+                    "trans_func": "parse_int3",
+                    "attributes": {
+                        "interface": {"target": "snapshot.val.sta.g.ifid", "value": 0},
+                        "context": {"target": "snapshot.ctx", "value": 0, "trans_func": "get_ir_context_id"}
+                    }
+                },
+                {
+                    "otel_name" : "gauge_no_attr",
+                    "type": "ObservableGauge",
+                    "description": "Obs Transmitted bytes gauge 1",
+                    "unit": "d",
+                    "trans_func": "parse_int4"
+                },
+                {
+                    "otel_name": "gauge_stat_attr",
+                    "type": "ObservableGauge",
+                    "description": "Obs Transmitted bytes gauge 2",
+                    "unit": "e",
+                    "trans_func": "parse_int5",
+                    "attributes": {
+                        "attribute1": {"value": 500},
+                        "attribute2": {"value": 600}
+                    }
+                },                
+                {
+                    "obj_id": "IRSnapshotLogModel",
+                    "metric_path" : {"paths": ["snapshot.val.sts.tx.t.nb"]},
+                    "otel_name" : "gauge_dyn_attr",
+                    "type": "ObservableGauge",
+                    "description": "Obs Transmitted bytes gauge 3",
+                    "unit": "f",
+                    "trans_func": "parse_int6",
+                    "attributes": {
+                        "interface": {"target": "snapshot.val.sta.g.ifid", "value": 0},
+                        "context": {"target": "snapshot.ctx", "value": 0, "trans_func": "get_ir_context_id"}
+                    }
+                },
+                {
+                    "otel_name" : "obs_counter_no_attr",
+                    "type": "ObservableCounter",
+                    "description": "Obs Transmitted bytes counter 1",
+                    "unit": "g",
+                    "trans_func": "parse_int7"
+                },
+                {
+                    "otel_name": "obs_counter_stat_attr",
+                    "type": "ObservableCounter",
+                    "description": "Obs Transmitted bytes counter 2",
+                    "unit": "h",
+                    "trans_func": "parse_int8",
+                    "attributes": {
+                        "attribute1": {"value": 700},
+                        "attribute2": {"value": 800}
+                    }
+                },                
+                {
+                    "obj_id": "IRSnapshotLogModel",
+                    "metric_path" : {"paths": ["snapshot.val.sts.tx.t.nb"]},
+                    "otel_name" : "obs_counter_dyn_attr",
+                    "type": "ObservableCounter",
+                    "description": "Obs Transmitted bytes counter 3",
+                    "unit": "i",
+                    "trans_func": "parse_int9",
+                    "attributes": {
+                        "interface": {"target": "snapshot.val.sta.g.ifid", "value": 0},
+                        "context": {"target": "snapshot.ctx", "value": 0, "trans_func": "get_ir_context_id"}
+                    }
+                }
+            ]
+        },
+        {
+            "scope": "sdep-observability",
+            "scope_version": "1.0",
+            "met_points": [
+                {
+                    "obj_id": "IrIf",
+                    "metric_path" : {"paths": ["snapshot.val.sts.tx.t.nb"]},
+                    "otel_name": "sdep_byte_counter",
+                    "type": "Counter",
+                    "description": "Transmitted packets counter",
+                    "unit": "bytes",
+                    "trans_func": "parse_int",
+                    "attributes": {
+                        "interface": {"target": "snapshot.val.sta.g.ifid", "value": 0},
+                        "context": {"target": "snapshot.ctx", "value": 0, "trans_func": "get_ir_context_id"}
+                    }
+                }
+            ]
+        }        
+    ]
+}

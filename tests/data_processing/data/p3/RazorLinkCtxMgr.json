@@ -1,0 +1,30 @@
+{
+  "Hd": {
+    "Ty": "Log",
+    "P": {
+      "Fi": "lw/shared/util/src/public/log2/LoggingObject.cpp",
+      "Li": 862
+    },
+    "Ct": "Components.RazorLink.snapshot",
+    "Ti": "20240220T115952.333132",
+    "Cl": {
+      "ownr": "",
+      "oid": "<RazorLinkCtxMgr!937>",
+      "info": "",
+      "sinf": "",
+      "goid": ""
+    },
+    "Fu": "DoSnapshotLog"
+  },
+  "0": "",
+  "snapshot": {
+    "sid": 3548,
+    "ctx": "",
+    "obj": "<RazorLinkCtxMgr!937>",
+    "val": {
+      "Sta": {
+        "nCtx": 2
+      }
+    }
+  }
+}
